@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap');
+
+* {
+    padding: 0 auto;
+    margin: 0 auto;
+    transition: 0.5s;
+}
+body{
+    font-family: 'Jura';
+}
+.index_logo_block{
+    width: 100;
+    display: flex;
+    text-align: center;
+}
+header{
+    display: flex;
+    width: 100%;
+    background-color: #196D87;
+    height: 80px;
+}
+
+.toolbar  {
+    width: 80%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    gap: 10%;
+}
+.toolbar a {
+  font-size: 32px;
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.toolbar a::before,
+.toolbar a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  background-color: #fff;
+  transition: all 0.5s ease;
+}
+
+.toolbar a::before {
+  left: 50%;
+}
+
+.toolbar a::after {
+  right: 50%;
+}
+
+.toolbar a:hover::before,
+.toolbar a:hover::after {
+  width: 50%;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.title_page_index{
+    margin-top: 85px;
+    font-size: 64px;
+}
+.index_map{
+    margin-top: 15px;
+    width: 75%;
+}
+.history_block{
+    margin-top: 100px;
+    background-color: #196D87;
+    width: 100%;
+}
+.title_history{
+    margin-top: 50px;
+    color: #fff;
+    font-size: 64px;
+}
+.history_content{
+    color: #fff;
+    max-width: 80%;
+    font-size: 40px;
+    margin-bottom: 49px;
+}
+.boss_block{
+    margin-top: 100px;
+}
+.boss_title{
+    color: black;
+    font-size: 64px;
+}
+.boss_img{
+    margin-top: 50px;
+    width: 700px;
+}
+.boss_status{
+    font-size: 40px;
+}
+.joing_block{
+    margin-top: 100px;
+    background-color: #196D87;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.open_catalog_index{
+    margin-top: 70px;
+    background-color: #fff;
+    padding: 0px 100px 12px 100px;
+    border-radius: 5px;
+    color: black;
+    text-decoration: none;
+    font-size: 64px;
+}
+.open_catalog_index:hover{
+    background-color: #692F41;
+    color: #fff;
+}
+.joing_block img{
+    margin-bottom: 50px;
+}
+
+
+/* blog */
+.title_page{
+    font-size: 48px;
+}
+.blog_container{
+    max-width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    gap: 10%;
+    margin-bottom: 100px;
+}
+.blog_block{
+    width: 500px;
+    height: 600px;
+    background-color: #196D87;
+    border-radius: 10px;
+    margin-top: 100px;
+
+}
+.title_blog{
+    font-size: 48px;
+    color: #fff;
+}
+.date_blog{
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.blog_hr{
+    width: 100%;
+}
+.blog_content{
+    padding: 10px 29px 10px 29px;
+    color: #fff;
+    font-size: 24px;
+}
+
+
+/* product */
+.product_container{
+    width: 80%;        
+    margin-bottom: 50px;
+}
+.product_card{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #196D87;
+    border-radius: 10px;
+    margin-top: 100px;
+    min-height: 330px;       
+}
+.product_title{
+    font-size: 48px;
+    color: #fff;
+}
+.product_hr{
+    width: 100%;
+}
+.product_text-container{
+    width: 90%;
+    display: flex;
+    gap: 2%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+.img_product{
+    width: 300px;
+    border-radius: 10px;
+}
+.product_content{
+    font-size: 24px;
+    color: #fff;
+}
+.buy_now-btn{
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 0px 50px 6px 50px;
+    border-radius: 5px;
+    color: black;
+    text-decoration: none;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+.buy_now-btn:hover{
+    background-color: #692F41;
+    color: #fff;
+}
+
+/* contacts */
+.contacts-container{
+    width: 100%;
+}
+.info_contacts_block{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    margin-top: 50px;
+}
+.title_contacts{
+    font-size: 40px;
+    color: black;
+    font-weight: 600;
+}
+.phone_contacts{
+    font-size: 24px;
+}
+.socseti_contacts_blocks{
+    margin-top: 50px;
+    width: 210px;
+}
+.socseti_contacts_blocks img{
+    margin-top: 35px;
+}
+.callback_contacts_block{
+    width: 70%;
+    background-color: #196D87;
+    border-radius: 10px;
+    margin-top: 100px;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+}
+.callback_title{
+    color: #fff;
+    padding-top: 30px;
+    font-size: 32px;
+}
+.callback_form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.input_callback_text{
+    margin-top: 50px;
+    border-radius: 10px;
+    font-size: 25px;
+    border: none;
+    width: 40%;
+    padding: 10px;    
+    font-family: 'Jura';
+}
+.callback_btn{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 40%;
+    font-size: 25px;
+    border-radius: 10px;
+    border: none;
+    background-color: #692F41;
+    color: #fff;
+    font-family: 'Jura';
+    padding: 10px 0px 10px 0px;
+    cursor: pointer;
+}
+.callback_btn:hover{
+    background-color: #fff;
+    color: black;
+}
+.contacts_map{
+    margin-top: 100px;
+    width: 100%;
+    height: 600px;
+}
+
+/* about_me */
+.history_about_me{
+    width: 100%;
+    background-color: #196D87;
+    margin-top: 20px;
+    min-height: 100px;
+}
+.title_history_about{
+    color: #fff;
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+.text_history_about{
+    color: #fff;
+    max-width: 60%;
+    font-size: 24px;
+    padding-bottom: 50px;
+}
+.maps_about_me-container{
+    margin-top: 100px;
+}
+.filials_map{
+    width: 100%;
+    height: 600px;
+}
+
+/* auth */
+.auth_block{
+    margin-top: 10%;
+    width: 40%;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    background-color: #196D87;
+    border-radius: 10px;
+}
+.auth_title{
+    margin-top: 20px;
+    color: #fff;
+    font-size: 36px;
+}
+.auth_form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.auth_input_login{
+    width: 60%;
+    border-radius: 10px;
+    font-size: 24px;
+    padding: 5px;
+    border: none;
+    margin-top: 50px;
+}
+.auth_input_password{
+    width: 60%;
+    border-radius: 10px;
+    font-size: 24px;
+    padding: 5px;
+    border: none;
+    margin-top: 50px;
+}
+.auth_btn{
+    margin-top: 50px;
+    background-color: #692F41;
+    font-size: 24px;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    width: 40%;
+    padding: 5px 0px 5px 0px;
+    cursor: pointer;
+}
+.auth_btn:hover{
+    background-color: #fff;
+    color: #692F41;
+}
+.registr_href{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    color: #fff;
+}
+.auth_error{
+    color: #fff;
+}
+.success{
+    color: #fff;
+    font-weight: 600;
+    font-size: 24px;
+}
+.error{
+    color: #692F41;
+    font-weight: 600;
+    font-size: 24px;
+}
