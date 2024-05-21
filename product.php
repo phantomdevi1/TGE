@@ -9,14 +9,15 @@
 </head>
 <body>
 <header>
-        <div class="toolbar">
+    <div class="toolbar">
         <a href="product.php">продукция</a>
         <a href="about_me.html">о нас</a>
         <a href="index.html">главная</a>
         <a href="contacts.php">контакты</a>
         <a href="blog.php">блог</a>
+        <a href="auth.php">аккаунт</a>
     </div>
-    </header>
+</header>
 <div class="content">
     <img src="img/logo_light.svg" alt="">    
     <p class="title_page">продукция</p>
@@ -41,7 +42,7 @@
                     echo '<p class="product_content">' . nl2br(htmlspecialchars($row['Description'])) . '</p>';
                     echo '</div>';
                     echo '<hr class="product_hr">';
-                    echo ' <a class="buy_now-btn" href="contacts.php#callback">купить'. " " . htmlspecialchars($row['Name']) . '</a>';
+                    echo ' <a class="buy_now-btn" href="auth.php">купить'. " " . htmlspecialchars($row['Name']) . '</a>';
                     echo '</div>';
                 }
             } else {
