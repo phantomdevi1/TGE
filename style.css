@@ -558,9 +558,10 @@ header{
 }
 
 .table_products {
-    width: 100%;
+    width: 60%;
     border-collapse: collapse;
     margin-top: 20px;
+    margin-bottom: 100px;
 }
 
 .table_products thead {
