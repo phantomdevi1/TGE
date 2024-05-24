@@ -54,9 +54,10 @@
                         } else {
                             echo "<p class='error'>Ошибка при регистрации.</p>";
                         }
+                        $check_stmt->close();
+                        $insert_stmt->close();
                     }
-                    $check_stmt->close();
-                    $insert_stmt->close();
+                    
                 }
             }
         ?>
