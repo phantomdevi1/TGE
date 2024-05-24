@@ -473,3 +473,108 @@ header{
     font-size: 24px;    
     margin-bottom: 50px;
 }
+
+
+/* callback_admin */
+.table_callback {
+    width: 60%;
+    border-collapse: collapse;
+    margin-top: 50px;
+}
+
+.table_callback thead {
+    background-color: #333;
+    color: white;    
+}
+
+.table_callback th, .table_callback td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 24px;
+}
+
+.table_callback tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.table_callback tr:hover {
+    background-color: #f1f1f1;
+}
+
+.table_callback th {
+    background-color: #196D87;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .toolbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .table_callback {
+        font-size: 14px;
+    }
+
+    .table_callback th, .table_callback td {
+        padding: 8px;
+    }
+}
+
+/* product_admin */
+.product_admin_form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 50px;
+}
+
+.product_admin_form label {
+    font-weight: bold;
+}
+
+.product_admin_form input[type="text"],
+.product_admin_form textarea,
+.product_admin_form input[type="file"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.submit_product_admin {
+    margin-top: 50px;
+    padding: 10px;
+    background-color: #196D87;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+
+.submit_product_admin:hover {
+    background-color: #871919;
+}
+
+.table_products {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table_products thead {
+    background-color: #333;
+    color: white;
+}
+
+.table_products th, .table_products td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.table_products tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+

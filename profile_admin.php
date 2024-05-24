@@ -13,7 +13,8 @@
         <a href="order.php">заказы</a>
         <a href="blog_admin.php">блог</a>
         <a href="product_admin.html">продукция</a>
-        <a href="profile_admin">аккаунт</a>
+        <a href="callback_admin.php">заявки</a>
+        <a href="profile_admin.php">аккаунт</a>
     </div>
 </header>
 <?php

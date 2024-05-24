@@ -11,10 +11,11 @@
 </head>
 <body>
 <header>
-    <div class="toolbar">
+<div class="toolbar">
         <a href="order.php">заказы</a>
         <a href="blog_admin.php">блог</a>
-        <a href="product_admin.html">продукция</a>
+        <a href="product_admin.php">продукция</a>
+        <a href="callback_admin.php">заявки</a>
         <a href="profile_admin.php">аккаунт</a>
     </div>
 </header>
