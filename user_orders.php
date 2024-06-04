@@ -9,15 +9,15 @@
 </head>
 <body>
 <header>
-    <div class="toolbar">
-        <a href="product.php">продукция</a>
-        <a href="about_me.html">о нас</a>
-        <a href="index.html">главная</a>
-        <a href="contacts.php">контакты</a>
-        <a href="blog.php">блог</a>
-        <a href="profile.php">аккаунт</a>
-    </div>
-</header>
+        <div class="toolbar">
+            <a href="product.php">продукция</a>
+            <a href="about_me.php">о нас</a>
+            <a href="index.php">главная</a>
+            <a href="contacts.php">контакты</a>
+            <a href="blog.php">блог</a>
+            <a href="profile.php">аккаунт</a>
+        </div>
+    </header>
 
 <div class="content">
     <img src="img/logo_light.svg" alt="">    

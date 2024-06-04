@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+include 'config.php';
+
+$userID = $_SESSION['UserID'];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,10 +24,10 @@
         <div class="toolbar">
             <a href="product.php">продукция</a>
             <a href="about_me.html">о нас</a>
-            <a href="index.html">главная</a>
+            <a href="index.php">главная</a>
             <a href="contacts.php">контакты</a>
             <a href="blog.php">блог</a>
-            <a href="auth.php">аккаунт</a>
+            <a href="profile.php">аккаунт</a>
         </div>
     </header>
 

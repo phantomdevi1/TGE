@@ -10,13 +10,13 @@
 <body>
 <header>
         <div class="toolbar">
-        <a href="product.php">продукция</a>
-        <a href="about_me.html">о нас</a>
-        <a href="index.html">главная</a>
-        <a href="contacts.php">контакты</a>
-        <a href="blog.php">блог</a>
-        <a href="auth.php">аккаунт</a>
-    </div>
+            <a href="product.php">продукция</a>
+            <a href="about_me.php">о нас</a>
+            <a href="index.php">главная</a>
+            <a href="contacts.php">контакты</a>
+            <a href="blog.php">блог</a>
+            <a href="profile.php">аккаунт</a>
+        </div>
     </header>
 <div class="content">
     <img src="img/logo_light.svg" alt="">    
@@ -26,8 +26,8 @@
         <?php
         // Подключение к базе данных
         include 'config.php';
-        // Запрос на получение записей блога
-        $sql = "SELECT Title, PostDate, Content FROM BlogPosts";
+        // Запрос на получение записей блога с сортировкой по убыванию даты
+        $sql = "SELECT Title, PostDate, Content FROM BlogPosts ORDER BY PostDate DESC";
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {

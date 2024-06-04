@@ -9,15 +9,15 @@
 </head>
 <body>
 <header>
-    <div class="toolbar">
-        <a href="product.php">продукция</a>
-        <a href="about_me.html">о нас</a>
-        <a href="index.html">главная</a>
-        <a href="contacts.php">контакты</a>
-        <a href="blog.php">блог</a>
-        <a href="profile.php">аккаунт</a>
-    </div>
-</header>
+        <div class="toolbar">
+            <a href="product.php">продукция</a>
+            <a href="about_me.php">о нас</a>
+            <a href="index.php">главная</a>
+            <a href="contacts.php">контакты</a>
+            <a href="blog.php">блог</a>
+            <a href="profile.php">аккаунт</a>
+        </div>
+    </header>
 <?php
 session_start();
 
@@ -54,7 +54,7 @@ $stmtName->fetch();
 $stmtName->close();
 
 // Запрос для подсчета количества заказов
-$sqlOrderCount = "SELECT COUNT(*) FROM Orders WHERE UserID = ?";
+$sqlOrderCount = "SELECT COUNT(*) FROM Orders WHERE ((UserID = ?) AND (OrderStatus != 'выдан'))";
 $stmtOrderCount = $conn->prepare($sqlOrderCount);
 $stmtOrderCount->bind_param("i", $userID);
 $stmtOrderCount->execute();
