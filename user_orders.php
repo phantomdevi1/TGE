@@ -6,20 +6,6 @@
     <title>Заказы</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
-    <style>
-        .orders_list tr:hover {
-            background-color: #f2f2f2;
-        }
-        .orders_list .pending {
-            background-color: #d1ecf1; /* Синеватый цвет */
-        }
-        .orders_list .delivered {
-            background-color: #d4edda; /* Зеленоватый цвет */
-        }
-        .orders_list .rejected {
-            background-color: #f8d7da; /* Красноватый цвет */
-        }
-    </style>
 </head>
 <body>
 <header>
@@ -68,21 +54,19 @@
         echo "<tr><th>Код</th><th>Продукт</th><th>Количество</th><th>Дата заказа</th><th>Статус</th></tr>";
         while ($row = $result->fetch_assoc()) {
             $status_class = '';
-                $status = mb_strtolower($row['OrderStatus'], 'UTF-8');
-                switch ($status) {
-                    case 'выдан':
-                        $status_class = 'pending'; // Синеватый цвет
-                        break;
-                    case 'доставлен':
-                        $status_class = 'delivered'; // Зеленоватый цвет
-                        break;
-                    case 'отказ':
-                        $status_class = 'rejected'; // Красноватый цвет
-                        break;
-                    default:
-                        $status_class = '';
-                }
-
+            $status = mb_strtolower($row['OrderStatus'], 'UTF-8');
+                      
+            if ($status == 'выдан') {
+                $status_class = 'pending';
+            } elseif ($status == 'доставлен') {
+                $status_class = 'delivered';
+            } elseif ($status == 'отказ') {
+                $status_class = 'rejected';
+            } else {
+                echo "Статус заказа не распознан: $status<br>"; // Отладочный вывод
+                var_dump($row['OrderStatus']); // Добавляем эту строку для вывода информации о значении статуса
+            }
+            
             echo "<tr class='$status_class'>";
             echo "<td>" . htmlspecialchars($row['OrderID']) . "</td>";
             echo "<td>" . htmlspecialchars($row['ProductName']) . "</td>";
