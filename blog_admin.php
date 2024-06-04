@@ -11,8 +11,8 @@
 </head>
 <body>
 <header>
-<div class="toolbar">
-        <a href="order.php">заказы</a>
+    <div class="toolbar">
+        <a href="admin_order.php">заказы</a>
         <a href="blog_admin.php">блог</a>
         <a href="product_admin.php">продукция</a>
         <a href="callback_admin.php">заявки</a>
@@ -21,7 +21,7 @@
 </header>
 <div class="content">
     <img src="img/logo_light.svg" alt="">    
-    <p class="title_page">добавить блог</p>
+    <p class="title_page">добавить запись в блог</p>
     <div class="content_blog">
     <?php
         session_start();

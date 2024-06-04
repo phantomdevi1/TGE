@@ -10,7 +10,7 @@
 <body>
 <header>
     <div class="toolbar">
-        <a href="order.php">заказы</a>
+        <a href="admin_order.php">заказы</a>
         <a href="blog_admin.php">блог</a>
         <a href="product_admin.php">продукция</a>
         <a href="callback_admin.php">заявки</a>
