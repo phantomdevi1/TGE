@@ -62,9 +62,6 @@
                 $status_class = 'delivered';
             } elseif ($status == 'отказ') {
                 $status_class = 'rejected';
-            } else {
-                echo "Статус заказа не распознан: $status<br>"; // Отладочный вывод
-                var_dump($row['OrderStatus']); // Добавляем эту строку для вывода информации о значении статуса
             }
             
             echo "<tr class='$status_class'>";
