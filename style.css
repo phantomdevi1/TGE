@@ -648,6 +648,18 @@ header{
 .order_form button:hover{
     background-color: #072b36;
 }
+.orders_list tr:hover {
+    background-color: #f2f2f2;
+}
+.orders_list .pending {
+    background-color: #d1ecf1 !important; /* Синеватый цвет */
+}
+.orders_list .delivered {
+    background-color: #d4edda !important; /* Зеленоватый цвет */
+}
+.orders_list .rejected {
+    background-color: #f8d7da !important; /* Красноватый цвет */
+}
 
 /* user_orders */
 .orders_list{
