@@ -474,6 +474,21 @@ header{
     margin-bottom: 50px;
 }
 
+.logout_button{
+    margin-top: 50px;
+    background-color: #692F41;
+    color: #fff;
+    padding: 5px 10px 10px 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    font-family: 'Jura';
+}
+.logout_button:hover{
+    background-color: #692f41a1;
+}
+
 
 /* callback_admin */
 .table_callback {
@@ -535,11 +550,18 @@ header{
 }
 
 .product_admin_form input[type="text"],
-.product_admin_form textarea,
 .product_admin_form input[type="file"] {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
+}
+.product_admin_form textarea{
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 90%;
+    max-width: 100%;
+    min-height: 100px;
 }
 
 .submit_product_admin {
@@ -554,7 +576,7 @@ header{
 }
 
 .submit_product_admin:hover {
-    background-color: #871919;
+    background-color: #072b36;
 }
 
 .table_products {
@@ -579,3 +601,50 @@ header{
     background-color: #f2f2f2;
 }
 
+/* order */
+.product_details{
+    width: 60%;
+    background-color: #196D87;
+    border-radius: 10px;
+    color: #fff;
+}
+.order_true{
+    font-size: 26px;
+}
+.product_details h2{
+    margin-top: 10px;
+}
+.order_img{
+    width: 25%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.order_description{
+    width: 60%;
+    font-size: 18px;
+}
+.order_form{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.order_form label{
+    font-size: 18px;
+}
+.order_form input{
+    width: 40px;
+}
+.order_form button{
+    background-color: #692F41;
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid #692F41;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.order_form button:hover{
+    background-color: #072b36;
+}

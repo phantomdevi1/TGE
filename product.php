@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+include 'config.php';
+
+function isAuthenticated() {
+    return isset($_SESSION['UserID']);
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,42 +26,48 @@
         <a href="index.html">главная</a>
         <a href="contacts.php">контакты</a>
         <a href="blog.php">блог</a>
-        <a href="auth.php">аккаунт</a>
+        <a href="profile.php">профиль</a>
     </div>
 </header>
 <div class="content">
-    <img src="img/logo_light.svg" alt="">    
+    <img src="img/logo_light.svg" alt="Logo">    
     <p class="title_page">продукция</p>
 
     <div class="product_container">
-    <?php
-            include 'config.php';
+        <?php
+        // Запрос на получение данных о продуктах
+        $sql = "SELECT ProductID, ImagePath, Name, Description FROM Products";
+        $result = $conn->query($sql);
 
-            // Запрос на получение данных о продуктах
-            $sql = "SELECT ProductID, ImagePath, Name, Description FROM Products";
-            $result = $conn->query($sql);
-
-            // Проверка наличия результатов
-            if ($result->num_rows > 0) {
-                // Вывод данных каждой строки
-                while($row = $result->fetch_assoc()) {
-                    echo '<div class="product_card">';
-                    echo '<p class="product_title">' . htmlspecialchars($row['Name']) . '</p>';
-                    echo '<hr class="product_hr">';
-                    echo '<div class="product_text-container">';
-                    echo '<img class="img_product" src="' . htmlspecialchars($row['ImagePath']) . '" alt="">';
-                    echo '<p class="product_content">' . nl2br(htmlspecialchars($row['Description'])) . '</p>';
-                    echo '</div>';
-                    echo '<hr class="product_hr">';
-                    echo ' <a class="buy_now-btn" href="auth.php">купить'. " " . htmlspecialchars($row['Name']) . '</a>';
-                    echo '</div>';
+        // Проверка наличия результатов
+        if ($result->num_rows > 0) {
+            // Вывод данных каждой строки
+            while($row = $result->fetch_assoc()) {
+                echo '<div class="product_card">';
+                echo '<p class="product_title">' . htmlspecialchars($row['Name']) . '</p>';
+                echo '<hr class="product_hr">';
+                echo '<div class="product_text-container">';
+                echo '<img class="img_product" src="' . htmlspecialchars($row['ImagePath']) . '" alt="Product Image">';
+                echo '<p class="product_content">' . nl2br(htmlspecialchars($row['Description'])) . '</p>';
+                echo '</div>';
+                echo '<hr class="product_hr">';
+                
+                // Проверка аутентификации пользователя
+                if (isAuthenticated()) {
+                    // Если пользователь аутентифицирован, создаем ссылку для покупки товара
+                    echo '<a class="buy_now-btn" href="order.php?product_id=' . $row['ProductID'] . '">купить ' . htmlspecialchars($row['Name']) . '</a>';
+                } else {
+                    // Если пользователь не аутентифицирован, создаем ссылку для авторизации
+                    echo '<a class="buy_now-btn" href="auth.php">купить ' . htmlspecialchars($row['Name']) . '</a>';
                 }
-            } else {
-                echo "продукции пока не добвалено";
-            }
-            $conn->close();
-            ?>
 
+                echo '</div>';
+            }
+        } else {
+            echo "продукции пока не добавлено";
+        }
+        $conn->close();
+        ?>
     </div>
 </div>
 </body>

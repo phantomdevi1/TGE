@@ -12,13 +12,21 @@
     <div class="toolbar">
         <a href="order.php">заказы</a>
         <a href="blog_admin.php">блог</a>
-        <a href="product_admin.html">продукция</a>
+        <a href="product_admin.php">продукция</a>
         <a href="callback_admin.php">заявки</a>
         <a href="profile_admin.php">аккаунт</a>
     </div>
 </header>
+
 <?php
 session_start();
+
+if (isset($_POST['logout'])) {
+    session_unset();
+    session_destroy();
+    header("Location: auth.php");
+    exit();
+}
 
 if (!isset($_SESSION['UserID'])) {
     header("Location: auth.php"); 
@@ -47,15 +55,19 @@ $stmtName->close();
 
 $conn->close();
 ?>
+
 <div class="content">
     <img src="img/logo_light.svg" alt="">    
     <p class="title_page">профиль</p>
     <div class="hello_block">
-        <p class="hello_text">Добро пожаловать, администратор <?php echo $name ?? "Unknown"; ?></p>
+        <p class="hello_text">Добро пожаловать, администратор <?php echo htmlspecialchars($name) ?? "Unknown"; ?></p>
     </div>
     <div class="user_info_block">
-        <p>mail: <?php echo $email ?? "Unknown"; ?></p>
+        <p>mail: <?php echo htmlspecialchars($email) ?? "Unknown"; ?></p>
     </div>
+    <form action="" method="post" style="display:inline;">
+            <button type="submit" name="logout" class="logout_button">выход</button>
+        </form>
 </div>
 </body>
 </html>
