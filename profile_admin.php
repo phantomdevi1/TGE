@@ -35,6 +35,7 @@ $stmtName->close();
 
 $conn->close();
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,7 +52,7 @@ $conn->close();
         <a href="blog_admin.php">блог</a>
         <a href="product_admin.php">продукция</a>
         <a href="callback_admin.php">заявки</a>
-        <a href="profile_admin.php">аккаунт</а>
+        <a href="profile_admin.php">аккаунт</a>
     </div>
 </header>
 
@@ -70,3 +71,4 @@ $conn->close();
 </div>
 </body>
 </html>
+
