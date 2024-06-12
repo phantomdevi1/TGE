@@ -25,7 +25,7 @@ header{
     display: flex;
     text-align: center;
     align-items: center;
-    gap: 10%;
+    gap: 10px;
 }
 .toolbar a {
   font-size: 32px;
@@ -132,10 +132,9 @@ header{
     font-size: 48px;
 }
 .blog_container{
-    max-width: 80%;
+    width: 80%;
     display: flex;
     flex-wrap: wrap;
-    max-width: 1200px;
     gap: 10%;
     margin-bottom: 100px;
 }
@@ -522,20 +521,7 @@ header{
     color: white;
 }
 
-@media (max-width: 768px) {
-    .toolbar {
-        flex-direction: column;
-        gap: 10px;
-    }
 
-    .table_callback {
-        font-size: 14px;
-    }
-
-    .table_callback th, .table_callback td {
-        padding: 8px;
-    }
-}
 
 /* product_admin */
 .product_admin_form {
@@ -687,4 +673,197 @@ header{
 }
 .orders_list tr:nth-child(even) {
     background-color: #f9f9f9;
+}
+
+
+
+@media screen and (width < 1000px) {
+    .toolbar{
+        width: 100%;
+    }
+    .product_text-container{
+        flex-direction: column;
+    }
+
+    .input_callback_text{
+        width: 90%;
+    }
+    .callback_btn{
+        width: 90%;
+    }
+
+    .blog_block{
+        height: auto;
+    }
+    .blog_content{
+        margin-bottom: 30px;
+    }
+}
+
+
+@media screen and (width < 800px) {
+    header{
+        height: auto;
+    }
+    .toolbar{
+        flex-direction: column;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .toolbar a{
+        font-size: 20px;
+    }
+    .title_page_index{
+        font-size: 50px;
+    }
+    .title_history{
+        font-size: 30px;
+    }
+    .history_content{
+        font-size: 25px;
+    }
+    .boss_title{
+        font-size: 35px;
+    }
+    .boss_img{
+        width: 80%;
+    }
+    .boss_status{
+        font-size: 30px;
+    }
+    .open_catalog_index{
+        font-size: 25px;
+        padding: 10px;
+    }
+    .title_history_about{
+        font-size: 30px;
+    }
+    .text_history_about{
+        max-width: 95%;
+    }
+
+    .auth_block{
+        width: 70%;
+    }
+
+    .hello_block,
+    .user_info_block{
+        width: 80%;
+    }
+    .hello_text{
+        font-size: 30px;
+    }
+    .logout_button{
+        margin-bottom: 50px;
+    }
+
+    .orders_list{
+        width: 90%;
+    }
+
+
+    .table_callback{
+        width: 90%;
+    }
+    .table_callback th{
+        font-size: 20px;
+    }
+    .table_callback td{
+        font-size: 18px;
+    }
+}
+
+@media screen and (width < 600px) {
+    .product_text-container{
+        width: 97%;
+    }
+    .img_product{
+        width: 80%;
+    }
+    .product_content{
+        font-size: 20px;
+    }
+    .buy_now-btn{
+        font-size: 20px;
+    }
+    .product_title{
+        font-size: 35px;
+    }
+    
+    .auth_block{
+        width: 95%;
+    }
+
+    .callback_contacts_block{
+        width: 95%;
+    }
+    .title_contacts{
+        font-size: 25px;
+    }
+
+    .blog_block{
+        width: 95%;
+    }
+    .title_blog{
+        font-size: 30px;
+    }
+    .date_blog{
+        font-size: 15px;
+    }
+    .blog_content{
+        font-size: 20px;
+    }
+
+    .date_table_sixteen{
+        display: none;
+    }
+    .orders_list table{
+        width: 85%;
+    }
+    .orders_list th, .orders_list td{
+        font-size: 15px;
+    }
+}
+
+@media screen and (width < 350px) {
+    .title_page{
+        font-size: 30px;
+    }
+    .buy_now-btn{
+        padding: 5px;
+    }
+
+    .auth_input_login{
+        width: 90%;
+    }
+    .auth_input_password{
+        width: 90%;
+    }
+    .auth_btn{
+        width: 70%;
+    }
+    .auth_btn{
+        font-size: 20px;
+    }
+
+    .info_contacts_block{
+        width: 90%;
+    }
+    .socseti_contacts_blocks{
+        display: flex;
+        flex-direction: column;
+    }
+    .callback_title{
+        font-size: 25px;
+    }
+    .input_callback_text{
+        font-size: 20px;
+    }
+    .callback_btn{
+        font-size: 20px;
+    }
+
+    .blog_container{
+        width: 95%;
+    }
 }

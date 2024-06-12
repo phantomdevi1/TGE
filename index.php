@@ -23,7 +23,7 @@ $userID = $_SESSION['UserID'];
     <header>
         <div class="toolbar">
             <a href="product.php">продукция</a>
-            <a href="about_me.html">о нас</a>
+            <a href="about_me.php">о нас</a>
             <a href="index.php">главная</a>
             <a href="contacts.php">контакты</a>
             <a href="blog.php">блог</a>

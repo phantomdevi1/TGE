@@ -46,13 +46,13 @@ $result = $conn->query($sqlOrders);
 <?php if ($result->num_rows > 0): ?>
     <div class='orders_list'>
         <table>
-            <tr><th>Код</th><th>Название товара</th><th>Количество</th><th>Дата заказа</th><th>Статус</th></tr>
+            <tr><th>Код</th><th>Название товара</th><th class='date_table_sixteen'>Количество</th><th class='date_table_sixteen'>Дата заказа</th><th>Статус</th></tr>
             <?php while ($row = $result->fetch_assoc()): ?>
                 <tr>
                     <td><?php echo htmlspecialchars($row['OrderID']); ?></td>
                     <td><?php echo htmlspecialchars($row['ProductName']); ?></td>
-                    <td><?php echo htmlspecialchars($row['Quantity']); ?></td>
-                    <td><?php echo htmlspecialchars($row['OrderDate']); ?></td>
+                    <td class='date_table_sixteen'><?php echo htmlspecialchars($row['Quantity']); ?></td>
+                    <td class='date_table_sixteen'><?php echo htmlspecialchars($row['OrderDate']); ?></td>
                     <td>
                         <form action="" method="post">
                             <input type="hidden" name="order_id" value="<?php echo htmlspecialchars($row['OrderID']); ?>">

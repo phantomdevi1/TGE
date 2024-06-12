@@ -1,23 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Профиль администратора</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
-</head>
-<body>
-<header>
-    <div class="toolbar">
-        <a href="admin_order.php">заказы</a>
-        <a href="blog_admin.php">блог</a>
-        <a href="product_admin.php">продукция</a>
-        <a href="callback_admin.php">заявки</a>
-        <a href="profile_admin.php">аккаунт</a>
-    </div>
-</header>
-
 <?php
 session_start();
 
@@ -55,6 +35,25 @@ $stmtName->close();
 
 $conn->close();
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль администратора</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+</head>
+<body>
+<header>
+    <div class="toolbar">
+        <a href="admin_order.php">заказы</a>
+        <a href="blog_admin.php">блог</a>
+        <a href="product_admin.php">продукция</a>
+        <a href="callback_admin.php">заявки</a>
+        <a href="profile_admin.php">аккаунт</а>
+    </div>
+</header>
 
 <div class="content">
     <img src="img/logo_light.svg" alt="">    

@@ -58,7 +58,7 @@ function isAuthenticated() {
                     echo '<a class="buy_now-btn" href="order.php?product_id=' . $row['ProductID'] . '">купить ' . htmlspecialchars($row['Name']) . '</a>';
                 } else {
                     // Если пользователь не аутентифицирован, создаем ссылку для авторизации
-                    echo '<a class="buy_now-btn" href="auth.php">купить ' . htmlspecialchars($row['Name']) . '</a>';
+                    echo '<a class="buy_now-btn" href="profile.php">купить ' . htmlspecialchars($row['Name']) . '</a>';
                 }
 
                 echo '</div>';

@@ -1,5 +1,8 @@
 
+<?php
+       
 
+        ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,11 +26,10 @@
     <img src="img/logo_light.svg" alt="">    
     <p class="title_page">добавить запись в блог</p>
     <div class="content_blog">
-    <?php
-        session_start();
 
+<?php
         include 'config.php';
-
+        
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if (isset($_POST['title']) && isset($_POST['date']) && isset($_POST['content'])) {
                 $title = $_POST['title'];

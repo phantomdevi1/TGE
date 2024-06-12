@@ -1,23 +1,3 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Профиль</title>    
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
-</head>
-<body>
-<header>
-        <div class="toolbar">
-            <a href="product.php">продукция</a>
-            <a href="about_me.php">о нас</a>
-            <a href="index.php">главная</a>
-            <a href="contacts.php">контакты</a>
-            <a href="blog.php">блог</a>
-            <a href="profile.php">аккаунт</a>
-        </div>
-    </header>
 <?php
 session_start();
 
@@ -64,6 +44,26 @@ $stmtOrderCount->close();
 
 $conn->close();
 ?>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль</title>    
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+</head>
+<body>
+<header>
+        <div class="toolbar">
+            <a href="product.php">продукция</a>
+            <a href="about_me.php">о нас</a>
+            <a href="index.php">главная</a>
+            <a href="contacts.php">контакты</a>
+            <a href="blog.php">блог</a>
+            <a href="profile.php">аккаунт</a>
+        </div>
+    </header>
 
 <div class="content">
     <img src="img/logo_light.svg" alt="">    

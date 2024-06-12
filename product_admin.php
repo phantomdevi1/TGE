@@ -57,7 +57,7 @@
             <tr>
                 <th>Изображение</th>
                 <th>Название</th>
-                <th>Описание</th>
+                <th class='date_table_sixteen'>Описание</th>
             </tr>
         </thead>
         <tbody>
@@ -70,7 +70,7 @@
                     echo "<tr>";
                     echo "<td><img src='" . $row['ImagePath'] . "' alt='" . $row['Name'] . "' width='100'></td>";
                     echo "<td>" . $row['Name'] . "</td>";
-                    echo "<td>" . $row['Description'] . "</td>";
+                    echo "<td class='date_table_sixteen'>" . $row['Description'] . "</td>";
                     echo "</tr>";
                 }
             } else {
