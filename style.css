@@ -771,6 +771,19 @@ header{
     .table_callback td{
         font-size: 18px;
     }
+
+    .date_blog_input,
+    .title_blog_input{
+        width: 80%;
+    }
+    .blog_textarea{
+        min-width: 80%;
+        max-width: 80%;
+    }
+    .push_new_blog{
+        width: 80%;
+        font-size: 20px;
+    }
 }
 
 @media screen and (width < 600px) {
@@ -822,6 +835,10 @@ header{
     }
     .orders_list th, .orders_list td{
         font-size: 15px;
+    }
+
+    .content_blog{
+        width: 90%;
     }
 }
 
